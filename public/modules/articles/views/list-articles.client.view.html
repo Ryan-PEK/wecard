@@ -1,0 +1,29 @@
+<section data-ng-controller="ArticlesController" data-ng-init="find()">
+    <br>
+    <div class="row">
+        <div class="col-xs-6 col-md-3 full-card" data-ng-repeat="article in articles | filter:$root.csearch">
+            <a class="card" data-ng-href="#!/articles/{{article._id}}">
+                <div class="card-body">
+                    <div class="text-center card-img">
+                        <img src="http://placehold.it/200x100">
+                    </div>
+                    <div class="text-left card-content">
+                        <pre data-ng-bind="article.content"></pre>
+                    </div>
+                    <div class="text-center card-link">
+                        <p data-ng-show="article.link!==''">
+                            <a class="goto" href="http://{{article.link}}" target="_blank" role="button">资源链接&raquo;</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <span data-ng-bind="article.title"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-if="articles.$resolved && !articles.length">
+        No articles yet, why don't you <a href="/#!/articles/create">create one</a>?
+    </div>
+</section>
+

@@ -1,0 +1,26 @@
+<section data-ng-controller="ArticlesController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="article.title"></h1>
+	</div>
+	<div class="pull-right" data-ng-show="authentication.user._id == article.user._id">
+		<a class="btn btn-primary" href="/#!/articles/{{article._id}}/edit">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+	<small>
+		<em class="text-muted">
+			Posted on
+			<span data-ng-bind="article.created | date:'mediumDate'"></span>
+		</em>
+	</small>
+	<br>
+	<h4>搜索关键字</h4>
+	<div class="well well-sm" data-ng-bind="article.keyword"></div>
+	<h4>资源链接</h4>
+	<div class="well well-sm" data-ng-bind="article.link"></div>
+	<h4>卡片描述</h4>
+	<pre class="well well-sm" data-ng-bind="article.content"></pre>
+</section>
