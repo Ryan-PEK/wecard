@@ -4,6 +4,10 @@
 npm-debug.log
 node_modules/
 public/lib
+public/uploads
+!public/lib/nobower
 app/tests/coverage/
 .bower-*/
 .idea/
+
+

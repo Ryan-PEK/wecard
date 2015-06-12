@@ -4,9 +4,15 @@
  * Module dependencies.
  */
 var users = require('../../app/controllers/users.server.controller'),
-	articles = require('../../app/controllers/articles.server.controller');
+	articles = require('../../app/controllers/articles.server.controller'),
+	upload = require('../../app/controllers/upload.server.controller');
 
 module.exports = function(app) {
+
+	// Article Routes
+	app.route('/articles/upload')
+		.post(upload.upload);
+
 	// Article Routes
 	app.route('/articles')
 		.get(articles.list)

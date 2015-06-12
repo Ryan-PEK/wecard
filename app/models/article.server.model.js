@@ -20,6 +20,11 @@ var CardSchema = new Schema({
 		trim: true,
 		required: 'Title cannot be blank'
 	},
+	thumb: {
+		type: String,
+		default: '',
+		trim: true
+	},
 	keyword: {
 		type: String,
 		default: '',

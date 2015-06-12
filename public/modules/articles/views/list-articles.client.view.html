@@ -5,14 +5,15 @@
             <a class="card" data-ng-href="#!/articles/{{article._id}}">
                 <div class="card-body">
                     <div class="text-center card-img">
-                        <img src="http://placehold.it/200x100">
+                        <img ng-src="uploads/{{article.thumb}}" data-ng-if="article.thumb!==''">
+                        <img src="http://placehold.it/200x100&text=none" data-ng-if="article.thumb===''">
                     </div>
                     <div class="text-left card-content">
                         <pre data-ng-bind="article.content"></pre>
                     </div>
                     <div class="text-center card-link">
                         <p data-ng-show="article.link!==''">
-                            <a class="goto" href="http://{{article.link}}" target="_blank" role="button">资源链接&raquo;</a>
+                        	<a class="btn btn-default btn-xs" href="http://{{article.link}}" target="_blank" role="button">去看看...</a>
                         </p>
                     </div>
                 </div>
