@@ -6,7 +6,7 @@ module.exports = {
 		description: 'wecar',
 		keywords: 'wecard'
 	},
-	port: process.env.PORT || 3000,
+	port: process.env.PORT || 4401,
 	templateEngine: 'swig',
 	sessionSecret: 'MEAN',
 	sessionCollection: 'sessions',
