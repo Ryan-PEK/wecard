@@ -25,12 +25,12 @@ var CardSchema = new Schema({
 		default: '',
 		trim: true
 	},
-	keyword: {
-		type: String,
-		default: '',
-		trim: true,
-		required: 'Keyword cannot be blank'
-	},
+	// keyword: {
+	// 	type: String,
+	// 	default: '',
+	// 	trim: true,
+	// 	required: 'Keyword cannot be blank'
+	// },
 	link: {
 		type: String,
 		default: '',

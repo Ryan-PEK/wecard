@@ -116,6 +116,15 @@ a:active {
     max-width: 90%;
 }
 
+.card-content {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.card-content pre {
+    color: #606060;
+}
+
+
 .card-title {
     margin: 0 !important;
     padding-top: 0.5em !important;
