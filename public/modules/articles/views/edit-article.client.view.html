@@ -26,17 +26,15 @@
                         <p ng-show="articleForm.title.$error.required" class="text-danger">卡片名称不可为空。</p>
                     </div>
                 </div>
-                <!--
                 <div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.keyword.$invalid}">
                     <label class="control-label" for="keyword">搜索关键字</label>
                     <div class="controls">
-                        <input name="keyword" type="text" data-ng-model="article.keyword" id="keyword" class="form-control" placeholder="keyword" required>
+                        <input name="keyword" type="text" data-ng-model="article.keyword" id="keyword" class="form-control" placeholder="keyword">
                     </div>
                     <div ng-show="submitted && articleForm.keyword.$invalid" class="help-block">
                         <p ng-show="articleForm.keyword.$error.required" class="text-danger">搜索关键字不可为空。</p>
                     </div>
                 </div>
-                -->
                 <div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.link.$invalid}">
                     <label class="control-label" for="link">链接地址</label>
                     <div class="controls">
@@ -49,7 +47,7 @@
                 <div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.content.$invalid}">
                     <label class="control-label" for="content">卡片描述</label>
                     <div class="controls">
-                        <textarea name="content" data-ng-model="article.content" id="content" class="form-control" cols="30" rows="10" placeholder="Content" required></textarea>
+                        <textarea name="content" data-ng-model="article.content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
                     </div>
                     <div ng-show="submitted && articleForm.content.$invalid" class="help-block">
                         <p ng-show="articleForm.content.$error.required" class="text-danger">卡片描述不可为空。</p>
