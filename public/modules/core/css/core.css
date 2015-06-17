@@ -85,6 +85,7 @@ a:active {
 }
 .card-content {
 	height: 120px;
+    overflow: auto;
 }
 .card-link {
 	height: 30px;
